@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "google" {
-  project = "burner-ahmmoustafa"
+  project = "burner-ahmmoust"
   region = "us-central1"
   zone = "us-central1-a"
 }
