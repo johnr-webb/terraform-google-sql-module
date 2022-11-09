@@ -8,8 +8,7 @@ terraform {
 }
 
 provider "google" {
-  # project = local.project_id
-  credentials = var.gcp_credentials
-  region = var.region
-  zone = var.zone_env_map[local.environment]
+  project = "burner-ahmmoustafa"
+  region = "us-central1"
+  zone = "us-central1-a"
 }
