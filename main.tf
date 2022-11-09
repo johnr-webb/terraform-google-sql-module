@@ -1,20 +1,24 @@
 resource "google_sql_database" "sql_database" {
-  name = "my-database"
+  name = var.database_name
   instance = google_sql_database_instance.sql_database_instance.name
+
+  depends_on = [
+    google_sql_database_instance.sql_database_instance
+  ]
 }
 
 resource "google_sql_database_instance" "sql_database_instance" {
-  name = "my-database-instance"
-  database_version = "MYSQL_8_0"
-  region = "us-central1"
+  name = var.database_instance_name
+  database_version = var.database_version
+  region = var.instance_region
 
   settings {
-    tier = "db-f1-micro"
+    tier = var.instance_tier
   }
 }
 
 resource "google_sql_user" "sql_user" {
-  name = "mysql_user"
+  name = var.sql_user_name
   instance = google_sql_database_instance.sql_database_instance.name
   password = random_password.pwd.result
 
