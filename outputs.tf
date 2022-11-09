@@ -8,7 +8,7 @@ output "database_username" {
   value = google_sql_user.sql_user.name
 }
 
-output "database_password" {
-  description = "Password for SQL user"
-  value = google_sql_user.sql_user.password
-}
+# output "database_password" {
+#   description = "Password for SQL user"
+#   value = google_sql_user.sql_user.password
+# }
