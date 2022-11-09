@@ -25,6 +25,6 @@ resource "google_sql_user" "sql_user" {
   password = var.user_password
 
   depends_on = [
-    random_password.pwd, google_sql_database_instance.sql_database_instance
+    google_sql_database_instance.sql_database_instance
   ]
 }
