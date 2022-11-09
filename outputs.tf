@@ -11,5 +11,4 @@ output "database_username" {
 output "database_password" {
   description = "Password for SQL user"
   value = google_sql_user.sql_user.password
-  sensitive = true
 }

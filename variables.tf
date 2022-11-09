@@ -38,6 +38,5 @@ variable "sql_user_name" {
 
 variable "user_password" {
   description = "Password for SQL user"
-  default = "abcdefg"
-  sensitive = true
+  default = "abcdefg1234567"
 }
