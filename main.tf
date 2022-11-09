@@ -22,14 +22,9 @@ resource "google_sql_database_instance" "sql_database_instance" {
 resource "google_sql_user" "sql_user" {
   name = var.sql_user_name
   instance = google_sql_database_instance.sql_database_instance.name
-  password = random_password.pwd.result
+  password = var.user_password
 
   depends_on = [
     random_password.pwd, google_sql_database_instance.sql_database_instance
   ]
-}
-
-resource "random_password" "pwd" {
-  length = 16
-  special = false
 }
