@@ -36,7 +36,7 @@ variable "sql_user_name" {
   description = "Name for SQL user"
 }
 
-variable "user_password" {
-  description = "Password for SQL user"
-  default = "abcdefg1234567"
-}
+# variable "user_password" {
+#   description = "Password for SQL user"
+#   default = "abcdefg1234567"
+# }
