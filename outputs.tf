@@ -1,6 +1,6 @@
-output "database_host" {
-  description = "Host for SQL user"
-  value = google_sql_user.sql_user.host
+output "database_link" {
+  description = "Link for SQL user"
+  value = google_sql_database.sql_database.self_link
 }
 
 output "database_username" {
