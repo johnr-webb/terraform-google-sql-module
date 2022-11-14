@@ -36,6 +36,6 @@ variable "sql_user_name" {
   description = "Name for SQL user"
 }
 
-variable "database_password" {
-  description = "Password for SQL user"
-}
+# variable "database_password" {
+#   description = "Password for SQL user"
+# }
