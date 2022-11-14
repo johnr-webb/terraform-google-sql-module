@@ -1,4 +1,4 @@
-output "database_link" {
+output "database_host" {
   description = "Link for SQL user"
   value = google_sql_database.sql_database.self_link
 }
