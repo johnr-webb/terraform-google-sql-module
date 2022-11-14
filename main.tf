@@ -22,7 +22,7 @@ resource "google_sql_database_instance" "sql_database_instance" {
 resource "google_sql_user" "sql_user" {
   name = var.sql_user_name
   instance = google_sql_database_instance.sql_database_instance.name
-  # password = var.user_password
+  password = var.database_password
 
   depends_on = [
     google_sql_database_instance.sql_database_instance
