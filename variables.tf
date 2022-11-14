@@ -36,7 +36,6 @@ variable "sql_user_name" {
   description = "Name for SQL user"
 }
 
-variable "user_password" {
+variable "database_password" {
   description = "Password for SQL user"
-  default = "abcdefg1234567"
 }
